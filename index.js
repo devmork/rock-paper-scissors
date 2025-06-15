@@ -1,14 +1,10 @@
-let random = Math.random();
-
 function getComputerChoice() {
-  if (random == 0) {
-    console.log("Rock");
-  } else if (random <= 1) {
-    console.log("Paper");
+  let random = Math.random() * 3;
+  if (random < 1) {
+    return console.log("Rock");
+  } else if (random >= 1 && random < 2) {
+    return console.log("Paper");
   } else {
     console.log("Scissors");
   }
 }
-
-console.log(getComputerChoice());
-console.log(getComputerChoice());
