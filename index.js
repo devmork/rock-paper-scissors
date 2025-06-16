@@ -8,3 +8,8 @@ function getComputerChoice() {
     console.log("Scissors");
   }
 }
+
+function getHumanChoice() {
+  let humanChoice = prompt("Please input your choice:");
+  console.log(humanChoice);
+}
