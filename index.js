@@ -13,3 +13,6 @@ function getHumanChoice() {
   let humanChoice = prompt("Please input your choice:");
   console.log(humanChoice);
 }
+
+let humanScore = 0;
+let computerScore = 9;
