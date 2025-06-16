@@ -1,17 +1,19 @@
+let random = Math.random() * 3;
+
 function getComputerChoice() {
-  let random = Math.random() * 3;
   if (random < 1) {
-    return console.log("Rock");
+    return "Rock";
   } else if (random >= 1 && random < 2) {
-    return console.log("Paper");
+    return "Paper";
   } else {
-    console.log("Scissors");
+    return "Scissors";
   }
 }
 
+let humanChoice = prompt("Please input your choice:");
+
 function getHumanChoice() {
-  let humanChoice = prompt("Please input your choice:");
-  console.log(humanChoice);
+  return humanChoice;
 }
 
 let humanScore = 0;
@@ -36,7 +38,10 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
     console.log("You lose! Scissors loses to Rock");
     computerScore++;
-  } else {
-    console.log("Draw");
   }
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+console.log(playRound(humanSelection, computerSelection));
