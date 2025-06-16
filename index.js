@@ -1,6 +1,6 @@
-let random = Math.random() * 3;
-
 function getComputerChoice() {
+  let random = Math.random() * 3;
+
   if (random < 1) {
     return "Rock";
   } else if (random >= 1 && random < 2) {
