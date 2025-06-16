@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Please input your choice:");
+  let humanChoice = prompt("Please input your choice:").toUpperCase();
   return humanChoice;
 }
 
