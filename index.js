@@ -2,11 +2,11 @@ function getComputerChoice() {
   let random = Math.random() * 3;
 
   if (random < 1) {
-    return "Rock";
+    return "ROCK";
   } else if (random >= 1 && random < 2) {
-    return "Paper";
+    return "PAPER";
   } else {
-    return "Scissors";
+    return "SCISSORS";
   }
 }
 
