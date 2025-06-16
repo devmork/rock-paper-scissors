@@ -17,4 +17,20 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice, computerScore) {}
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice == "Rock" && computerChoice == "Scissors") {
+    console.log("You win! Rock beats Scissors");
+  } else if (humanChoice == "Rock" && computerChoice == "Paper") {
+    console.log("You lose! Rock loses to Paper");
+  } else if (humanChoice == "Paper" && computerChoice == "Rock") {
+    console.log("You win! Paper beats Rock");
+  } else if (humanChoice == "Paper" && computerChoice == "Scissors") {
+    console.log("You lose! Paper loses to Scissors");
+  } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
+    console.log("You win! Scissors beats Paper");
+  } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
+    console.log("You lose! Scissors loses to Rock");
+  } else {
+    console.log("Draw");
+  }
+}
