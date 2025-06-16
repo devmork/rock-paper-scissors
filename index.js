@@ -10,9 +10,8 @@ function getComputerChoice() {
   }
 }
 
-let humanChoice = prompt("Please input your choice:");
-
 function getHumanChoice() {
+  let humanChoice = prompt("Please input your choice:");
   return humanChoice;
 }
 
@@ -41,8 +40,10 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {}
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+}
 
-console.log(playRound(humanSelection, computerSelection));
+console.log(playGame());
