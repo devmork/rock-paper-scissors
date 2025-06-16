@@ -19,22 +19,22 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice == "Rock" && computerChoice == "Scissors") {
+  if (humanChoice == "ROCK" && computerChoice == "SCISSORS") {
     console.log("You win!");
     humanScore++;
-  } else if (humanChoice == "Rock" && computerChoice == "Paper") {
+  } else if (humanChoice == "ROCK" && computerChoice == "PAPER") {
     console.log("You lose!");
     computerScore++;
-  } else if (humanChoice == "Paper" && computerChoice == "Rock") {
+  } else if (humanChoice == "PAPER" && computerChoice == "ROCK") {
     console.log("You win!");
     humanScore++;
-  } else if (humanChoice == "Paper" && computerChoice == "Scissors") {
+  } else if (humanChoice == "PAPER" && computerChoice == "SCISSORS") {
     console.log("You lose!");
     computerScore++;
-  } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
+  } else if (humanChoice == "SCISSORS" && computerChoice == "PAPER") {
     console.log("You win!");
     humanScore++;
-  } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
+  } else if (humanChoice == "SCISSORS" && computerChoice == "ROCK") {
     console.log("You lose!");
     computerScore++;
   }
