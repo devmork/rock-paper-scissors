@@ -51,3 +51,7 @@ function playGame() {
     console.log("Computer won the game!");
   }
 }
+
+btnRock.addEventListener("click", () => {
+  playRound("ROCK", getComputerChoice());
+});
