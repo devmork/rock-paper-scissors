@@ -6,10 +6,17 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <section class="computerChoice-section">
+      <h3>Computer</h3>
+      <div id="computer-choice"></div>
+    </section>
+
     <p id="score"></p>
-    <button onclick="playRound()">Rock</button>
-    <button onclick="playRound()">Paper</button>
-    <button onclick="playRound()">Scissors</button>
+    <button onclick="playRound('ROCK', getComputerChoice())">Rock</button>
+    <button onclick="playRound('PAPER', getComputerChoice())">Paper</button>
+    <button onclick="playRound('SCISSORS', getComputerChoice())">
+      Scissors
+    </button>
     <script></script>
   </body>
 </html>
