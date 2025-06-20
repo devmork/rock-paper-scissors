@@ -1,15 +1,19 @@
 const btnRock = document.querySelector("#btn-rock");
 const btnPaper = document.querySelector("#btn-paper");
 const btnScissors = document.querySelector("#btn-scissors");
+let computerChoice = document.querySelector("#computer-choice");
 
 function getComputerChoice() {
   let random = Math.random() * 3;
 
   if (random < 1) {
+    computerChoice.textContent = "Rock";
     return "ROCK";
   } else if (random >= 1 && random < 2) {
+    computerChoice.textContent = "Paper";
     return "PAPER";
   } else {
+    computerChoice.textContent = "Scissors";
     return "SCISSORS";
   }
 }
