@@ -19,9 +19,15 @@
     </section>
     <p id="score"></p>
     <section class="player-choice">
-      <button onclick="playRound('ROCK', getComputerChoice())">Rock</button>
-      <button onclick="playRound('PAPER', getComputerChoice())">Paper</button>
-      <button onclick="playRound('SCISSORS', getComputerChoice())">
+      <button onclick="playRound('ROCK', getComputerChoice())" id="btn-rock">
+        Rock
+      </button>
+      <button onclick="playRound('PAPER', getComputerChoice())" id="btn-paper">
+        Paper
+      </button>
+      <button
+        onclick="playRound('SCISSORS', getComputerChoice())"
+        did="btn-scissors">
         Scissors
       </button>
     </section>
