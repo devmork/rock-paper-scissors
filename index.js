@@ -3,6 +3,7 @@ const btnPaper = document.querySelector("#btn-paper");
 const btnScissors = document.querySelector("#btn-scissors");
 let computerChoice = document.querySelector("#computer-choice");
 let humanChoice = document.querySelector("#human-choice");
+let gameResult = document.querySelector("#game-result");
 
 function getComputerChoice() {
   let random = Math.random() * 3;
@@ -29,22 +30,22 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "ROCK" && computerChoice == "SCISSORS") {
-    console.log("You win!");
+    gameResult.textContent = "You win!";
     humanScore++;
   } else if (humanChoice == "ROCK" && computerChoice == "PAPER") {
-    console.log("You lose!");
+    gameResult.textContent = "You lose!";
     computerScore++;
   } else if (humanChoice == "PAPER" && computerChoice == "ROCK") {
-    console.log("You win!");
+    gameResult.textContent = "You win!";
     humanScore++;
   } else if (humanChoice == "PAPER" && computerChoice == "SCISSORS") {
-    console.log("You lose!");
+    gameResult.textContent = "You lose!";
     computerScore++;
   } else if (humanChoice == "SCISSORS" && computerChoice == "PAPER") {
-    console.log("You win!");
+    gameResult.textContent = "You win!";
     humanScore++;
   } else if (humanChoice == "SCISSORS" && computerChoice == "ROCK") {
-    console.log("You lose!");
+    gameResult.textContent = "You lose!";
     computerScore++;
   }
 }
