@@ -2,6 +2,7 @@ const btnRock = document.querySelector("#btn-rock");
 const btnPaper = document.querySelector("#btn-paper");
 const btnScissors = document.querySelector("#btn-scissors");
 let computerChoice = document.querySelector("#computer-choice");
+let humanChoice = document.querySelector("#human-choice");
 
 function getComputerChoice() {
   let random = Math.random() * 3;
@@ -57,13 +58,16 @@ function playGame() {
 }
 
 btnRock.addEventListener("click", () => {
+  humanChoice.textContent = "Rock";
   playRound("ROCK", getComputerChoice());
 });
 
 btnPaper.addEventListener("click", () => {
+  humanChoice.textContent = "Paper";
   playRound("PAPER", getComputerChoice());
 });
 
 btnScissors.addEventListener("click", () => {
+  humanChoice.textContent = "Scissors";
   playRound("SCISSORS", getComputerChoice());
 });
