@@ -1,3 +1,7 @@
+const btnRock = document.querySelector("#btn-rock");
+const btnPaper = document.querySelector("#btn-paper");
+const btnScissors = document.querySelector("#btn-scissors");
+
 function getComputerChoice() {
   let random = Math.random() * 3;
 
