@@ -6,6 +6,21 @@ let humanChoice = document.querySelector("#human-choice");
 let gameResult = document.querySelector("#game-result");
 let score = document.querySelector("#score");
 
+btnRock.addEventListener("click", () => {
+  humanChoice.textContent = "Rock";
+  playRound("ROCK", getComputerChoice());
+});
+
+btnPaper.addEventListener("click", () => {
+  humanChoice.textContent = "Paper";
+  playRound("PAPER", getComputerChoice());
+});
+
+btnScissors.addEventListener("click", () => {
+  humanChoice.textContent = "Scissors";
+  playRound("SCISSORS", getComputerChoice());
+});
+
 function getComputerChoice() {
   let random = Math.random() * 3;
 
@@ -47,27 +62,19 @@ function playRound(humanChoice, computerChoice) {
     gameResult.textContent = "You lose!";
     computerScore++;
   }
+  playGame();
 }
 
 function playGame() {
-  if (humanScore > computerScore) {
-    console.log("You win the game!");
-  } else {
-    console.log("Computer won the game!");
+  if (humanScore === 5) {
+    gameResult.textContent = "You won the game!";
+    humanScore = 0;
+    computerScore = 0;
+    score.textContent = humanScore;
+  } else if (computerScore === 5) {
+    gameResult.textContent = "Computer won the game!";
+    humanScore = 0;
+    computerScore = 0;
+    score.textContent = humanScore;
   }
 }
-
-btnRock.addEventListener("click", () => {
-  humanChoice.textContent = "Rock";
-  playRound("ROCK", getComputerChoice());
-});
-
-btnPaper.addEventListener("click", () => {
-  humanChoice.textContent = "Paper";
-  playRound("PAPER", getComputerChoice());
-});
-
-btnScissors.addEventListener("click", () => {
-  humanChoice.textContent = "Scissors";
-  playRound("SCISSORS", getComputerChoice());
-});
