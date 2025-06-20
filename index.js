@@ -21,11 +21,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt("Please input your choice:").toUpperCase();
-  return humanChoice;
-}
-
 let humanScore = 0;
 let computerScore = 0;
 
