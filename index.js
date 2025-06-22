@@ -5,6 +5,7 @@ let computerChoice = document.querySelector("#computer-choice");
 let humanChoice = document.querySelector("#human-choice");
 let gameResult = document.querySelector("#game-result");
 let score = document.querySelector("#score");
+let computerScoreDisplay = document.querySelector("#computer-score");
 
 btnRock.addEventListener("click", () => {
   humanChoice.textContent = "Rock";
@@ -47,6 +48,7 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice == "ROCK" && computerChoice == "PAPER") {
     gameResult.textContent = "You lose!";
     computerScore++;
+    computerScoreDisplay.textContent = computerScore;
   } else if (humanChoice == "PAPER" && computerChoice == "ROCK") {
     gameResult.textContent = "You win!";
     humanScore++;
@@ -54,6 +56,7 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice == "PAPER" && computerChoice == "SCISSORS") {
     gameResult.textContent = "You lose!";
     computerScore++;
+    computerScoreDisplay.textContent = computerScore;
   } else if (humanChoice == "SCISSORS" && computerChoice == "PAPER") {
     gameResult.textContent = "You win!";
     humanScore++;
@@ -61,6 +64,7 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice == "SCISSORS" && computerChoice == "ROCK") {
     gameResult.textContent = "You lose!";
     computerScore++;
+    computerScoreDisplay.textContent = computerScore;
   }
   playGame();
 }
