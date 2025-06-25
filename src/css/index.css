@@ -4,4 +4,19 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100vh;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.player-options {
+  width: 100px;
+  border: none;
+}
+
+button {
+  width: 150px;
+  margin: 10px;
 }
